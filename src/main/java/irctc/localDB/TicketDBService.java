@@ -1,17 +1,21 @@
 package irctc.localDB;
 
 import irctc.entities.Ticket;
-import irctc.entities.TicketStatus;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.PropertyNamingStrategies;
+import tools.jackson.databind.json.JsonMapper;
 
 import java.io.File;
 import java.util.List;
+import java.util.UUID;
 
 public class TicketDBService {
     private static TicketDBService ticketDBServiceInstance;
-    private final String ticketFilePath = "src/main/java/irctc/localDB/Tickets.json";
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final String ticketFilePath = "src/main/resources/Tickets.json";
+    private final ObjectMapper objectMapper = JsonMapper.builder()
+            .propertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE)
+            .build();
     private List<Ticket> ticketList;
 
     private TicketDBService() {
@@ -50,6 +54,7 @@ public class TicketDBService {
     }
 
     public void addTicket(Ticket ticket) {
+        ticket.setId(UUID.randomUUID().toString());
         ticketList.add(ticket);
         saveTicketsToFile();
     }
