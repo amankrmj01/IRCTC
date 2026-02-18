@@ -1,0 +1,109 @@
+[
+  {
+    "id": "1",
+    "name": "Express 101",
+    "source": "CityA",
+    "destination": "CityF",
+    "ticket_types": [
+      "FIRST_AC",
+      "SECOND_AC",
+      "THIRD_AC",
+      "SLEEPER"
+    ],
+    "ticket_prices": {
+      "FIRST_AC": 1000,
+      "SECOND_AC": 700,
+      "THIRD_AC": 500,
+      "SLEEPER": 300
+    },
+    "total_seats": {
+      "FIRST_AC": 50,
+      "SECOND_AC": 100,
+      "THIRD_AC": 150,
+      "SLEEPER": 200
+    },
+    "available_seats": {
+      "FIRST_AC": 10,
+      "SECOND_AC": 20,
+      "THIRD_AC": 30,
+      "SLEEPER": 40
+    },
+    "stations": [
+      "CityA",
+      "CityB",
+      "CityC",
+      "CityD",
+      "CityE",
+      "CityF"
+    ],
+    "departure_times": {
+      "CityA": "10:00",
+      "CityB": "18:00",
+      "CityC": "20:00",
+      "CityD": "22:00",
+      "CityE": "00:00",
+      "CityF": "02:00"
+    },
+    "arrival_times": {
+      "CityA": "10:00",
+      "CityB": "18:00",
+      "CityC": "20:00",
+      "CityD": "22:00",
+      "CityE": "00:00",
+      "CityF": "02:00"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Express 102",
+    "source": "CityA",
+    "destination": "CityG",
+    "ticket_types": [
+      "FIRST_AC",
+      "SECOND_AC",
+      "SLEEPER"
+    ],
+    "ticket_prices": {
+      "FIRST_AC": 1200,
+      "SECOND_AC": 900,
+      "THIRD_AC": 600,
+      "SLEEPER": 400
+    },
+    "total_seats": {
+      "FIRST_AC": 50,
+      "SECOND_AC": 100,
+      "THIRD_AC": 150,
+      "SLEEPER": 200
+    },
+    "available_seats": {
+      "FIRST_AC": 15,
+      "SECOND_AC": 25,
+      "THIRD_AC": 35,
+      "SLEEPER": 45
+    },
+    "stations": [
+      "CityA",
+      "CityH",
+      "CityI",
+      "CityJ",
+      "CityK",
+      "CityG"
+    ],
+    "departure_times": {
+      "CityA": "12:00",
+      "CityH": "20:00",
+      "CityI": "22:00",
+      "CityJ": "00:00",
+      "CityK": "02:00",
+      "CityG": "04:00"
+    },
+    "arrival_times": {
+      "CityA": "12:00",
+      "CityH": "20:00",
+      "CityI": "22:00",
+      "CityJ": "00:00",
+      "CityK": "02:00",
+      "CityG": "04:00"
+    }
+  }
+]

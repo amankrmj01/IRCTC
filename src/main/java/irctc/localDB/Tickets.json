@@ -1,0 +1,38 @@
+[
+  {
+    "id": "101",
+    "source": "CityA",
+    "destination": "CityB",
+    "date_of_Journey": "2024-07-01",
+    "departure_time": "10:00",
+    "train_id": "101",
+    "user_id": "1",
+    "seat_number": [
+      "A1"
+    ],
+    "passenger_names": [
+      "John Doe"
+    ],
+    "status": "BOOKED",
+    "price": 500,
+    "type": "THIRD_AC"
+  },
+  {
+    "id": "102",
+    "source": "CityA",
+    "destination": "CityC",
+    "date_of_Journey": "2024-07-02",
+    "departure_time": "15:00",
+    "train_id": "102",
+    "user_id": "1",
+    "seat_number": [
+      "B2"
+    ],
+    "passenger_names": [
+      "Jack"
+    ],
+    "status": "BOOKED",
+    "price": 300,
+    "type": "SLEEPER"
+  }
+]
