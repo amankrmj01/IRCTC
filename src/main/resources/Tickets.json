@@ -1,12 +1,12 @@
 [
   {
-    "id": "101",
+    "id": "fb1cc948-6708-4f57-8353-c631317fb2b7",
     "source": "CityA",
     "destination": "CityB",
     "date_of_Journey": "2024-07-01",
     "departure_time": "10:00",
-    "train_id": "101",
-    "user_id": "1",
+    "train_id": "70293ce3-6b6f-4fd3-9a58-8a94fcc3cfdf",
+    "user_id": "1fa56f6c-5349-49aa-8c15-cb6d77bec6d1",
     "seat_number": [
       "A1"
     ],
@@ -18,13 +18,13 @@
     "type": "THIRD_AC"
   },
   {
-    "id": "102",
+    "id": "94209bfe-116b-41b7-8bcb-b7df883bb08d",
     "source": "CityA",
     "destination": "CityC",
     "date_of_Journey": "2024-07-02",
     "departure_time": "15:00",
-    "train_id": "102",
-    "user_id": "1",
+    "train_id": "5c42cd54-a325-40b8-9f55-e8bcd2daaa80",
+    "user_id": "1fa56f6c-5349-49aa-8c15-cb6d77bec6d1",
     "seat_number": [
       "B2"
     ],
