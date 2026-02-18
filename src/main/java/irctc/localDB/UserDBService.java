@@ -1,9 +1,10 @@
 package irctc.localDB;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import irctc.entities.User;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.PropertyNamingStrategies;
+import tools.jackson.databind.json.JsonMapper;
 
 import java.io.File;
 import java.util.List;
@@ -14,7 +15,9 @@ public class UserDBService {
     private static final String usersFile = "src/main/resources/Users.json";
     private static List<User> userList;
     private static UserDBService userDBServiceInstance;
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = JsonMapper.builder()
+            .propertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE)
+            .build();
 
     private UserDBService() {
         File usersFileObj = new File(UserDBService.usersFile);
