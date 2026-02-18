@@ -1,15 +1,17 @@
 package irctc.localDB;
 
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import irctc.entities.User;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.util.List;
+import java.util.UUID;
 
 public class UserDBService {
 
-    private static final String usersFile = "src/main/java/irctc/localDB/Users.json";
+    private static final String usersFile = "src/main/resources/Users.json";
     private static List<User> userList;
     private static UserDBService userDBServiceInstance;
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -41,6 +43,7 @@ public class UserDBService {
     }
 
     public void addUser(User user) {
+        user.setId(UUID.randomUUID().toString());
         userList.add(user);
         saveUsersToFile();
     }

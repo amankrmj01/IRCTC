@@ -3,6 +3,8 @@ package irctc.services;
 import irctc.entities.User;
 import irctc.localDB.UserDBService;
 
+import java.util.List;
+
 public class UserAuthService {
 
     private final UserDBService userDBService;
@@ -19,5 +21,19 @@ public class UserAuthService {
     public Boolean loginUser(String email, String password) {
         User user = userDBService.getUserByEmail(email);
         return user != null && user.getPassword().equals(password);
+    }
+
+    public Boolean registerUser(String name, String email, String password) {
+        if (userDBService.getUserByEmail(email) != null) {
+            return false;
+        }
+        User newUser = User.builder()
+                .name(name)
+                .email(email)
+                .password(password)
+                .bookedTickets(List.of())
+                .build();
+        userDBService.addUser(newUser);
+        return true;
     }
 }
