@@ -3,14 +3,18 @@ package irctc.localDB;
 import irctc.entities.Train;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.PropertyNamingStrategies;
+import tools.jackson.databind.json.JsonMapper;
 
 import java.io.File;
 import java.util.List;
 
 public class TrainDBService {
     private static TrainDBService trainDBServiceInstance;
-    private final String trainsFilePath = "src/main/java/irctc/localDB/Trains.json";
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final String trainsFilePath = "src/main/resources/Trains.json";
+    private final ObjectMapper objectMapper = JsonMapper.builder()
+            .propertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE)
+            .build();
     private List<Train> trainList;
 
     private TrainDBService() {
@@ -39,6 +43,15 @@ public class TrainDBService {
     public Train getTrainById(String Id) {
         for (Train train : trainList) {
             if (train.getId().equals(Id)) {
+                return train;
+            }
+        }
+        return null;
+    }
+
+    public Train getTrainByNameOrNumber(String trainNameOrNumber) {
+        for (Train train : trainList) {
+            if (train.getName().equalsIgnoreCase(trainNameOrNumber) || train.getTrainNumber().equals(trainNameOrNumber)) {
                 return train;
             }
         }

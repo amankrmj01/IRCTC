@@ -1,6 +1,7 @@
 [
   {
     "id": "5c42cd54-a325-40b8-9f55-e8bcd2daaa80",
+    "train_number": "12345",
     "name": "Express 101",
     "source": "CityA",
     "destination": "CityF",
@@ -11,10 +12,10 @@
       "SLEEPER"
     ],
     "ticket_prices": {
-      "FIRST_AC": 1000,
-      "SECOND_AC": 700,
-      "THIRD_AC": 500,
-      "SLEEPER": 300
+      "FIRST_AC": 15,
+      "SECOND_AC": 10,
+      "THIRD_AC": 8,
+      "SLEEPER": 3
     },
     "total_seats": {
       "FIRST_AC": 50,
@@ -51,10 +52,19 @@
       "CityD": "22:00",
       "CityE": "00:00",
       "CityF": "02:00"
+    },
+    "station_distances": {
+      "CityA": 0.0,
+      "CityB": 150.0,
+      "CityC": 280.0,
+      "CityD": 420.0,
+      "CityE": 550.0,
+      "CityF": 700.0
     }
   },
   {
     "id": "70293ce3-6b6f-4fd3-9a58-8a94fcc3cfdf",
+    "train_number": "54321",
     "name": "Express 102",
     "source": "CityA",
     "destination": "CityG",
@@ -64,10 +74,10 @@
       "SLEEPER"
     ],
     "ticket_prices": {
-      "FIRST_AC": 1200,
-      "SECOND_AC": 900,
-      "THIRD_AC": 600,
-      "SLEEPER": 400
+      "FIRST_AC": 16,
+      "SECOND_AC": 11,
+      "THIRD_AC": 8,
+      "SLEEPER": 4
     },
     "total_seats": {
       "FIRST_AC": 50,
@@ -104,6 +114,14 @@
       "CityJ": "00:00",
       "CityK": "02:00",
       "CityG": "04:00"
+    },
+    "station_distances": {
+      "CityA": 0.0,
+      "CityH": 180.0,
+      "CityI": 320.0,
+      "CityJ": 480.0,
+      "CityK": 620.0,
+      "CityG": 800.0
     }
   }
 ]
