@@ -59,6 +59,11 @@ public class UserDBService {
         }
     }
 
+    // Expose save method for external use
+    public void save() {
+        saveUsersToFile();
+    }
+
     public User getUserByEmail(String email) {
         for (User user : userList) {
             if (user.getEmail().equals(email)) {
