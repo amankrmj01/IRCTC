@@ -1,38 +1,74 @@
 [
   {
-    "id": "fb1cc948-6708-4f57-8353-c631317fb2b7",
-    "source": "CityA",
-    "destination": "CityB",
-    "date_of_Journey": "2024-07-01",
+    "date_of_journey": null,
     "departure_time": "10:00",
-    "train_id": "70293ce3-6b6f-4fd3-9a58-8a94fcc3cfdf",
-    "user_id": "1fa56f6c-5349-49aa-8c15-cb6d77bec6d1",
-    "seat_number": [
-      "A1"
-    ],
+    "destination": "CityB",
+    "id": "fb1cc948-6708-4f57-8353-c631317fb2b7",
     "passenger_names": [
       "John Doe"
     ],
+    "price": 500.0,
+    "seat_number": [
+      "A1"
+    ],
+    "source": "CityA",
     "status": "BOOKED",
-    "price": 500,
-    "type": "THIRD_AC"
+    "train_id": "70293ce3-6b6f-4fd3-9a58-8a94fcc3cfdf",
+    "type": "THIRD_AC",
+    "user_id": "1fa56f6c-5349-49aa-8c15-cb6d77bec6d1"
   },
   {
-    "id": "94209bfe-116b-41b7-8bcb-b7df883bb08d",
-    "source": "CityA",
-    "destination": "CityC",
-    "date_of_Journey": "2024-07-02",
+    "date_of_journey": null,
     "departure_time": "15:00",
-    "train_id": "5c42cd54-a325-40b8-9f55-e8bcd2daaa80",
-    "user_id": "1fa56f6c-5349-49aa-8c15-cb6d77bec6d1",
-    "seat_number": [
-      "B2"
-    ],
+    "destination": "CityC",
+    "id": "94209bfe-116b-41b7-8bcb-b7df883bb08d",
     "passenger_names": [
       "Jack"
     ],
+    "price": 300.0,
+    "seat_number": [
+      "B2"
+    ],
+    "source": "CityA",
     "status": "BOOKED",
-    "price": 300,
-    "type": "SLEEPER"
+    "train_id": "5c42cd54-a325-40b8-9f55-e8bcd2daaa80",
+    "type": "SLEEPER",
+    "user_id": "1fa56f6c-5349-49aa-8c15-cb6d77bec6d1"
+  },
+  {
+    "date_of_journey": "2026-12-09",
+    "departure_time": "12:12",
+    "destination": "CityD",
+    "id": "b25dbb72-06f3-4059-a04a-5b8598ca0ceb",
+    "passenger_names": [
+      "Aman"
+    ],
+    "price": 63000.0,
+    "seat_number": [
+      "A1"
+    ],
+    "source": "CityA",
+    "status": "BOOKED",
+    "train_id": "5c42cd54-a325-40b8-9f55-e8bcd2daaa80",
+    "type": "FIRST_AC",
+    "user_id": "f0a71444-b758-4b84-90c7-fe11a875cdbf"
+  },
+  {
+    "date_of_journey ": "2026-09-18",
+    "departure_time": "10:00",
+    "destination": "CityD",
+    "id": "39d47547-62d9-431e-8263-0468afa36215",
+    "passenger_names": [
+      "aman"
+    ],
+    "price": 63000.0,
+    "seat_number": [
+      "A1"
+    ],
+    "source": "CityA",
+    "status": "BOOKED",
+    "train_id": "5c42cd54-a325-40b8-9f55-e8bcd2daaa80",
+    "type": "FIRST_AC",
+    "user_id": "f0a71444-b758-4b84-90c7-fe11a875cdbf"
   }
 ]
