@@ -104,9 +104,8 @@ public class IRCTC {
     }
 
     private void viewTrains() {
-        println("Available Trains:");
         TrainService trainService = new TrainService();
-        trainService.displayTrainsDetails();
+        println(trainService.displayTrainsDetails());
     }
 
     private void bookTicket() {
@@ -122,23 +121,27 @@ public class IRCTC {
         }
         println("Enter Source:");
         String source = readln();
-        if (selectedTrain.getStations().stream().noneMatch(
-                station -> station.equalsIgnoreCase(source)
-        )) {
-            println("Source station not found in the train route. Please try again.");
-            return;
-        }
         println("Enter Destination:");
         String destination = readln();
-        if (selectedTrain.getStations().stream().noneMatch(
-                station -> station.equalsIgnoreCase(destination)
-        ))
-            println("Enter number of Passengers:");
+        String validationMsg = trainService.validateSourceAndDestination(selectedTrain, source, destination);
+        if (validationMsg != null) {
+            println(validationMsg);
+            return;
+        }
+        println("Enter date of travel (YYYY-MM-DD):");
+        String date = readln();
+        println("Enter time of travel (HH:MM):");
+        String time = readln();
+        println("Enter number of Passengers:");
         int numTickets;
         try {
             numTickets = Integer.parseInt(readln());
         } catch (NumberFormatException e) {
             println("Invalid number. Please try again.");
+            return;
+        }
+        if (numTickets <= 0) {
+            println("Number of passengers must be at least 1.");
             return;
         }
         String[] passengerNames = new String[numTickets];
@@ -159,16 +162,22 @@ public class IRCTC {
             return;
         }
         if (typeChoice >= 1 && typeChoice <= availableTypes.size()) {
-            bookTicketForType(selectedTrain, availableTypes.get(typeChoice - 1), passengerNames);
+            TicketType ticketType = availableTypes.get(typeChoice - 1);
+            TicketService ticketService = new TicketService();
+            String result = ticketService.bookTicketFull(
+                    source,
+                    destination,
+                    date,
+                    time,
+                    selectedTrain,
+                    user.getId(),
+                    java.util.Arrays.asList(passengerNames),
+                    ticketType
+            );
+            println(result);
         } else {
             println("Invalid ticket type selected. Please try again.");
         }
-
-        println("Ticket booking functionality is under development.");
-    }
-
-    private void bookTicketForType(Train selectedTrain, TicketType ticketType, String[] passengerNames) {
-
     }
 
     private void register() {
